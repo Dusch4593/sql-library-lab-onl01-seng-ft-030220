@@ -1,9 +1,13 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  "Write your SQL query here"
+  "SELECT title, year
+   FROM books
+   WHERE series_id = 1;"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
-  "Write your SQL query here"
+  "SELECT name, motto
+   FROM characters
+   WHERE length(characters.motto) = (SELECT MAX(length(characters .motto)) FROM characters);"
 end
 
 
